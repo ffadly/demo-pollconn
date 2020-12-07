@@ -57,13 +57,13 @@ class MyThread extends Thread {
 		while (true) {
 			a++;
 			try {
-				String selectSQL = "SELECT count(*) as jumlah from catalogsoa.database_connections;";
+				String selectSQL = "SELECT count(*) as jumlah from database_connections;";
 				connection = ConnectionSta.getInstance().getDataSource().getConnection();
 				prepStmt = connection.prepareStatement(selectSQL);
 				ResultSet rs = prepStmt.executeQuery();
 				while (rs.next()) {
 					System.out.println("Jumlah DB: " + rs.getInt("jumlah"));
-					
+
 				}
 				System.out.println("NumActive: " + ConnectionSta.getInstance().getDataSource().getNumActive());
 				System.out.println("NumIdle: " + ConnectionSta.getInstance().getDataSource().getNumIdle());

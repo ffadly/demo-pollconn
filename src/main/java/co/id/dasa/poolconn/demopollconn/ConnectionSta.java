@@ -23,7 +23,7 @@ public class ConnectionSta {
 
     private Connection connection = null;
 
-    private String database = "database";
+    private String database = "catalogsoa";
     private String hostname = "localhost";
     private String portnum = "3306";
     private String sid = "";
@@ -32,8 +32,7 @@ public class ConnectionSta {
     private String strurl = "jdbc:mysql://";
     private String strdrv = "com.mysql.cj.jdbc.Driver";
     private String user = "root";
-    private String pass = "Password";
-    
+    private String pass = "Jakarta1!";
     private String timezone = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 
     // static variable single_instance of type Singleton 
@@ -80,7 +79,7 @@ public class ConnectionSta {
             ds.setUsername(user);
             ds.setPassword(pass);
  
-
+            
             // Parameters for connection pooling
             ds.setMinIdle(10);
             ds.setMaxIdle(30);

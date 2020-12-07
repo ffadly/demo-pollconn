@@ -79,6 +79,7 @@ public class ConnectionSta {
             ds.setUsername(user);
             ds.setPassword(pass);
  
+            
             // Parameters for connection pooling
             ds.setMinIdle(10);
             ds.setMaxIdle(30);

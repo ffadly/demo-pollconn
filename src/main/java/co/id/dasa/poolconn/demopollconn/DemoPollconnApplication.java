@@ -63,6 +63,7 @@ class MyThread extends Thread {
 				ResultSet rs = prepStmt.executeQuery();
 				while (rs.next()) {
 					System.out.println("Jumlah DB: " + rs.getInt("jumlah"));
+					
 				}
 				System.out.println("NumActive: " + ConnectionSta.getInstance().getDataSource().getNumActive());
 				System.out.println("NumIdle: " + ConnectionSta.getInstance().getDataSource().getNumIdle());

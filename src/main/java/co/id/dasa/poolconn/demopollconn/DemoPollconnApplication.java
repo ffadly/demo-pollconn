@@ -57,7 +57,7 @@ class MyThread extends Thread {
 		while (true) {
 			a++;
 			try {
-				String selectSQL = "SELECT count(*) as jumlah from database_connections;";
+				String selectSQL = "SELECT count(*) as jumlah from catalog;";
 				connection = ConnectionSta.getInstance().getDataSource().getConnection();
 				prepStmt = connection.prepareStatement(selectSQL);
 				ResultSet rs = prepStmt.executeQuery();
